@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 from wordcloud import WordCloud
 import pandas as pd
-from ttkthemes import ThemedTk  # Menggunakan ThemedTk untuk tema modern
-import webbrowser  # Untuk membuka link di browser
+from ttkthemes import ThemedTk 
+import webbrowser
 
 
 class PlayStoreScraperApp:
@@ -14,9 +14,9 @@ class PlayStoreScraperApp:
         self.root = root
         self.root.title("Play Store Scraper")
         self.root.geometry("1000x950")
-        self.root.set_theme("arc")  # Menggunakan tema "arc" dari ttkthemes
+        self.root.set_theme("arc")
         self.current_frame = None
-        self.chart_frame = None  # Frame untuk menampilkan grafik
+        self.chart_frame = None
         self.create_widgets()
 
     def create_widgets(self):
@@ -349,6 +349,14 @@ class PlayStoreScraperApp:
 
 
 if __name__ == "__main__":
-    root = ThemedTk(theme="arc")  # Menggunakan ThemedTk dengan tema "arc"
+    root = ThemedTk(theme="arc") 
     app = PlayStoreScraperApp(root)
+    
+    def on_closing():
+        plt.close('all')  # Menutup semua figure matplotlib
+        root.destroy()
+    
+    # Menangani event saat jendela ditutup
+    root.protocol("WM_DELETE_WINDOW", on_closing)
+    
     root.mainloop()
