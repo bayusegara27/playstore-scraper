@@ -75,15 +75,3 @@
 - `ttkthemes`: Untuk tema tambahan pada antarmuka pengguna.
 
 ---
-
-## ❗ Kontribusi
-
-Tidak perlu berkontribusi untuk projek ini, karena projek ini digunakan sebagai Ujian Akhir Semester. 🎓
-
----
-
-## 👨‍💻 Penulis
-
-- **[bayusegara27](https://github.com/bayusegara27)** 🚀
-
----
